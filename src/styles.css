@@ -1,0 +1,45 @@
+img,
+H1,
+H2 {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: #1db0b1;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.mb-3 {
+  margin: 50px 20px;
+  max-width: 35%;
+}
+
+.card {
+  margin: 10px;
+  background: #e8f4fe;
+  border: #8ec9f9;
+}
+
+.calendar {
+  margin: 100px 0px;
+  text-align: center;
+}
+
+.weekdays {
+  color: #1db0b1;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.temperature {
+  color: #1db0b1;
+  font-weight: bold;
+  font-size: 20px;
+}
