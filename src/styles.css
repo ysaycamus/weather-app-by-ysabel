@@ -16,9 +16,13 @@ h2 {
   font-weight: normal;
 }
 
-.mb-3 {
-  margin: 50px 20px;
-  max-width: 35%;
+.search-form {
+  margin: 20px 5px;
+  max-width: 60%;
+}
+
+.search-button {
+  width: fit-content;
 }
 
 .card {
