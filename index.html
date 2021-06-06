@@ -4,9 +4,72 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Weather App</title>
+    
+     <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    
+    <link href="src/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/fc93678e83.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
+
   <body>
-    <h1>Git</h1>
+    <div class="container">
+    
+   <div class="mb-3">
+    <form class="search-form" id="search-function">
+      <div class="row">
+        <div class="col-10">
+      <input 
+      type="search" 
+      placeholder="How's the weather in..."
+      autofocus="on"
+      autocomplete="off"
+      class="form-control"
+      id="search-query"
+      />
+  </div>
+</div>
+</div>
+  <div class="col-3">
+    <input
+      type="submit"
+      value="Search"
+      class="form-control btn btn-primary shadow-sm w-100"
+    />
+  </div>
+</div>
+</form>
+
+      <div class="card">
+        <div class="card-body">
+        <img src="images/sun.svg" />
+        <h1>
+        <span style="background-color: #d5edf6">It's <span id="current-temperature"></span><span class="unit" id="celsius-link">°C</span> in <span id="city"></span>, <span id="country"></span></span>
+        </h1>
+        
+        <h2> 
+        <span id="description">Sunny with a chance of rain</span>
+        <div id="display-time"></div>
+        </h2>
+
+<div class="row calendar">
+    <div class="col weekdays">
+        Sun 
+        </br>
+        <span class="temperature">27°</span>
+    </div>
+    <div class="col weekdays">Mon </br> <span class="temperature">26°</span></div>
+    <div class="col weekdays">Tue </br> <span class="temperature">25°</span></div>
+    <div class="col weekdays">Wed </br> <span class="temperature">25°</span></div>
+    <div class="col weekdays">Thu </br> <span class="temperature">27°</span></div>
+    <div class="col weekdays">Fri </br> <span class="temperature">28°</span></div>
+    <div class="col weekdays">Sat </br> <span class="temperature">29°</span></div>
+</div>
+    </div>
+    </div>
+    </div>    
+    <script src="src/index.js"></script>
   </body>
 </html>
