@@ -21,6 +21,11 @@ p {
   margin: 0 auto;
 }
 
+.card-wrapper {
+  max-width: 680px;
+  margin: 30px auto;
+}
+
 .search-form {
   margin: 20px 5px;
   max-width: 60%;
@@ -31,7 +36,9 @@ p {
 }
 
 .card {
-  margin: 10px;
+  max-width: 680px;
+  margin: 30px auto;
+  padding: 20px;
   background: #e8f4fe;
   border: #8ec9f9;
 }
