@@ -43,6 +43,10 @@ p {
   border: #8ec9f9;
 }
 
+.icon-style {
+  width: 25%;
+}
+
 .calendar {
   margin: 100px 0px;
   text-align: center;
