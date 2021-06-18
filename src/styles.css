@@ -31,12 +31,19 @@ p {
   margin: 30px auto;
 }
 
+.logo {
+  max-width: 150px;
+  display: block;
+  text-align: left;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
 }
+
 .search-form {
   margin-top 40px;
   border-bottom: 1px solid #f9f7fe;
