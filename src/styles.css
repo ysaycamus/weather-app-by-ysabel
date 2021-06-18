@@ -1,3 +1,8 @@
+form {
+  display: block;
+  margin: 0 auto;
+}
+
 img,
 H1,
 H2 {
@@ -26,13 +31,36 @@ p {
   margin: 30px auto;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
 .search-form {
-  margin: 20px 5px;
-  max-width: 60%;
+  margin-top 40px;
+  border-bottom: 1px solid #f9f7fe;
+  max-width: 100%;
+  padding-bottom: 30px;
 }
 
 .search-button {
   width: fit-content;
+  font-weight: bold;
+}
+
+.search-input {
+  border: none;
+  padding: 15px 20px;
+  display: inline-block;
+  border-radius: 6px;
+  height: 50px;
+  line-height: 20px;
+}
+
+.form-control {
+  width: 100%;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .card {
