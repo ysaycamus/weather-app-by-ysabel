@@ -1,15 +1,15 @@
 function formatDate(date) {
-  let hours = currentTime.getHours();
+  let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
 
-  let minutes = currentTime.getMinutes();
+  let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
 
-  let dayIndex = currentTime.getDay();
+  let dayIndex = date.getDay();
   let days = [
     "Sunday",
     "Monday",
@@ -25,7 +25,14 @@ function formatDate(date) {
 }
 
 function displayWeatherCondition(response) {
-  console.log(response.data);
+  const localDate = new Date(
+    new Date((response.data.dt + response.data.timezone) * 1000)
+      .toUTCString()
+      .substring(0, 25)
+  );
+  let displayTime = document.querySelector("#display-time");
+  displayTime.innerHTML = formatDate(localDate);
+
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#country").innerHTML = response.data.sys.country;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
@@ -59,9 +66,5 @@ function handleSubmit(event) {
 
 let searchFunction = document.querySelector("#search-function");
 searchFunction.addEventListener("submit", handleSubmit);
-
-let displayTime = document.querySelector("#display-time");
-let currentTime = new Date();
-displayTime.innerHTML = formatDate(currentTime);
 
 searchCity("Manila");
