@@ -4,18 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
-    
-     <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    
+    <title>Weather App Draft</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
     <link href="src/styles.css" rel="stylesheet" type="text/css" />
-    <script src="https://kit.fontawesome.com/fc93678e83.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/fc93678e83.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
 
   <body>
-    <div class="container card-wrapper">
+ <div class="container card-wrapper">
     <div class="card">
     <div class="card-body">
 
@@ -49,19 +54,26 @@
 </div>
 </form>
 
- <img 
-          src="images/sun.svg" 
-          alt="sunny"
-          id="icon"
-          class="icon-style"/>
-        <h1>
-        <span style="background-color: #d5edf6">It's <span id="current-temperature"></span><span class="unit" id="celsius-link">°C</span> in <span id="city"></span>, <span id="country"></span></span>
-        </h1>
-        
-        <h2> 
-        <span id="description">Sunny with a chance of rain</span>
-        <div id="display-time"></div>
-        </h2>       
+
+    <div class="row weather-info">
+      <div class="col-6">
+        <h1><span id="city">Manila</span>, <span id="country">PH</span></h1>
+        <ul>
+          <li>
+            <span id="display-time">Saturday, 18:29</span>,
+            <span id="description">Clear</span>
+          </li>
+          <li>Humidity: <span>57%</span>, Wind: <span>0.45</span>km/h</li>
+        </ul>
+      </div>
+
+      <div class="col-6 temperature-container">
+        <div>
+          <img src="images/sun.svg" alt="sunny" id="icon" class="icon-style" />
+          <span id="current-temperature"> 31°C </span>
+        </div>
+      </div>
+    </div>
 
 <div class="row calendar">
     <div class="col weekdays">
@@ -84,6 +96,6 @@
     </div>    
    
     <script src="src/index.js"></script>
-    
+
   </body>
 </html>
