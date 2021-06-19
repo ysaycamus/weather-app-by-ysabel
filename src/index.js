@@ -28,6 +28,9 @@ function displayWeatherCondition(response) {
   console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#country").innerHTML = response.data.sys.country;
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = response.data.wind.speed;
+
   document.querySelector("#current-temperature").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -45,13 +48,7 @@ function displayWeatherCondition(response) {
 function searchCity(city) {
   let apiKey = "7b4d58a72665e27d7f7e9b21c60c129f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios
-    .get(apiUrl)
-    .then(displayWeatherCondition)
-    .catch(function (error) {
-      // handle error
-      console.log(error);
-    });
+  axios.get(apiUrl).then(displayWeatherCondition);
 }
 
 function handleSubmit(event) {
