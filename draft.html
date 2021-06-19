@@ -54,7 +54,6 @@
 </div>
 </form>
 
-
     <div class="row weather-info">
       <div class="col-6">
         <h1><span id="city">Manila</span>, <span id="country">PH</span></h1>
@@ -67,10 +66,12 @@
         </ul>
       </div>
 
-      <div class="col-6 temperature-container">
-        <div>
+      <div class="col-6">
+          <div class="temperature-container d-flex justify-content-end">
           <img src="images/sun.svg" alt="sunny" id="icon" class="icon-style" />
-          <span id="current-temperature"> 31°C </span>
+          <div class="big-temperature">
+          <span id="current-temperature">31</span>°C
+          </div>
         </div>
       </div>
     </div>
@@ -89,8 +90,8 @@
     <div class="col weekdays">Sat </br> <span class="temperature">29°</span></div>
 </div>
     </div>
-      <p>
-        <small>This project was coded by Ysabel Camus and is <a href="https://github.com/ysaycamus/weather-app-by-ysabel">open-sourced on GitHub</a></small>
+    <p>
+        <small><span class="source-code">This project was coded by Ysabel Camus and is <a href="https://github.com/ysaycamus/weather-app-by-ysabel">open-sourced on GitHub</a></span></small>
     </p>
     </div>
     </div>    

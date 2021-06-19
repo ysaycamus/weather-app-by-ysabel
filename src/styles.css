@@ -1,3 +1,7 @@
+body {
+  background: #e8f4fe;
+}
+
 form {
   display: block;
   margin: 0 auto;
@@ -7,12 +11,14 @@ H1,
 H2 {
   display: block;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   color: #1db0b1;
 }
 
 h1 {
-  font-size: 25px;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 48px;
 }
 
 h2 {
@@ -23,6 +29,15 @@ h2 {
 p {
   display: block;
   margin: 0 auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
 }
 
 .card-wrapper {
@@ -63,6 +78,7 @@ border-radius: 6px;
 
 .search-input {
   border: none;
+  background: #e8f4fe;
   padding: 15px 20px;
   display: inline-block;
   border-radius: 6px;
@@ -79,15 +95,37 @@ border-radius: 6px;
   max-width: 960px;
   margin: 30px auto;
   padding: 20px;
-  background: #e8f4fe;
+  background: #ffff;
   border: #8ec9f9;
+}
+
+.weather-info {
+  margin: 20px 0 10px;
+  margin-top: 20px; 
+}
+
+.weather-info li {
+     color: #1db0b1;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.temperature-container {
+
 }
 
 .icon-style {
   display: block;
-  margin: 0 auto;
+  margin-right: 10px;
   width: 25%;
 }
+
+.big-temperature {
+color: #1db0b1;
+  font-size: 70px;
+font-weight: 700;
+}
+
 
 .calendar {
   margin: 100px 0px;
@@ -104,4 +142,8 @@ border-radius: 6px;
   color: #1db0b1;
   font-weight: bold;
   font-size: 20px;
+}
+
+.source-code {
+   color: #1db0b1;
 }
