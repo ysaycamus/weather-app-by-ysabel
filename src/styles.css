@@ -40,6 +40,10 @@ li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .card-wrapper {
   max-width: 800px;
   margin: 30px auto;
@@ -126,6 +130,15 @@ li {
   color: #1db0b1;
   font-weight: normal;
   font-size: 20px;
+}
+
+.active a {
+  color: #1db0b1;
+  cursor: default;
+}
+
+.active a:hover {
+  text-decoration: none;
 }
 
 .calendar {
