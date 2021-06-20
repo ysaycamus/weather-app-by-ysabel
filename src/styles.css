@@ -143,7 +143,7 @@ a {
 
 .calendar {
   border-bottom: 1px solid #f9f7fe;
-  margin: 50px 20px;
+  margin: 50px 0px;
   text-align: center;
   padding-bottom: 30px;
 }
@@ -160,10 +160,22 @@ a {
   font-size: 20px;
 }
 
+.forecast-temperature-max {
+  font-weight: bold;
+}
+
+.forecast-temperature-min {
+  opacity: 0.5;
+}
+
 .weather-footer {
   color: #1db0b1;
   font-size: 14px;
   margin-top: 40px;
   line-height: 18px;
   text-align: center;
+}
+
+.seven-cols .col-md-1 {
+  width: 14.285714285714285714285714285714%;
 }
