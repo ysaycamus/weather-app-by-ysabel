@@ -24,6 +24,31 @@ function formatDate(date) {
   return `${day}, ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row seven-cols calendar">`;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-md-1 weekdays">
+        ${day}
+        </br>
+        <img src="images/sun.svg" alt="" width="36"/>
+        </br>
+        <span class="forecast-temperature-max">35°</span>
+        <span class="forecast-temperature-min">25°</span>
+    </div>
+  
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeatherCondition(response) {
   const localDate = new Date(
     new Date((response.data.dt + response.data.timezone) * 1000)
@@ -98,3 +123,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("Manila");
+displayForecast();
